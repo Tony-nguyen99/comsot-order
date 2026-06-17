@@ -34,7 +34,7 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     if(orderItems.length === 0) { alert("Vui lòng chọn ít nhất một sản phẩm!"); return; }
 
     // API Webhook kết nối trực tiếp đến tầng xử lý tự động (Make.com)
-    const makeWebhookUrl = 'https://hook.make.com/YOUR_UNIQUE_WEBHOOK_ID';
+    const makeWebhookUrl = 'https://hook.us2.make.com/o6o2xtph13dfii1npecmtc17j1ylko8t';
     
     const payload = {
         storeId: storeId,
