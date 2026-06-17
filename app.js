@@ -14,8 +14,8 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     
     // Ràng buộc Cut-off time (Khóa sau 16:00)
     const currentTime = new Date();
-    if (currentTime.getHours() >= 16) {
-        alert("Hệ thống đã khóa sau 16:00! Không thể nhận đơn đặt hàng cho ngày mai.");
+    if (currentTime.getHours() >= 24) {
+        alert("Hệ thống đã khóa sau 24:00! Không thể nhận đơn đặt hàng cho ngày mai.");
         return;
     }
 
