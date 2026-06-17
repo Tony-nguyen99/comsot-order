@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOON System - Ordering Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">SPOON SYSTEM</div>
+            <div class="timer">Giờ chốt đơn: <span class="highlight">16:00 Hàng Ngày</span></div>
+        </header>
+
+        <section class="store-selector">
+            <label for="storeId">Chi nhánh đặt hàng:</label>
+            <select id="storeId" required>
+                <option value="">-- Chọn chi nhánh --</option>
+                <option value="CN-BINHTHANH">39 Nguyễn Gia Trí - Bình Thạnh</option>
+                <option value="CN-THUDUC">Khu đô thị Vạn Phúc - Thủ Đức</option>
+            </select>
+        </section>
+
+        <main class="order-main">
+            <h3>Danh Mục Đồ Tiêu Hao</h3>
+            <form id="orderForm">
+                
+                <!-- Product Card 1 -->
+                <div class="product-card" data-sku="VND01-HB-1000ML">
+                    <div class="product-info">
+                        <span class="sku">SKU: VND01-HB-1000ML</span>
+                        <h4 class="product-name">Hộp Giấy Kraft Cao Cấp</h4>
+                        <p class="pack-size">Quy cách: Thùng (500 cái)</p>
+                    </div>
+                    <div class="product-qty">
+                        <button type="button" class="btn-qty minus">-</button>
+                        <input type="number" name="VND01-HB-1000ML" value="0" min="0" class="input-qty" readonly>
+                        <button type="button" class="btn-qty plus">+</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card" data-sku="VND02-MDG-20CM">
+                    <div class="product-info">
+                        <span class="sku">SKU: VND02-MDG-20CM</span>
+                        <h4 class="product-name">Muỗng Đũa Gỗ Bọc Màng</h4>
+                        <p class="pack-size">Quy cách: Thùng (1000 đôi)</p>
+                    </div>
+                    <div class="product-qty">
+                        <button type="button" class="btn-qty minus">-</button>
+                        <input type="number" name="VND02-MDG-20CM" value="0" min="0" class="input-qty" readonly>
+                        <button type="button" class="btn-qty plus">+</button>
+                    </div>
+                </div>
+
+                <footer class="order-footer">
+                    <button type="submit" id="btnSubmitOrder" class="btn-submit">XÁC NHẬN GỬI ĐƠN</button>
+                </footer>
+            </form>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
